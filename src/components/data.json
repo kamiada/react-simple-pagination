@@ -1,38 +1,38 @@
 [
       {
-        "_id": "5eb5f9a5d814a9f2d2b0ced5"
+        "animal": "cat"
       },
       {
-        "_id": "5eb5f9a509c7655a7ebb5d15"
+        "animal": "dog"
       },
       {
-        "_id": "5eb5f9a579e7cf43a3dfd49b"
+        "animal": "cow"
       },
       {
-        "_id": "5eb5f9a5d814a9f2d2b0ced5"
+        "animal": "whale"
       },
       {
-        "_id": "5eb5f9a509c7655a7ebb5d15"
+        "animal": "shark"
       },
       {
-        "_id": "5eb5f9a579e7cf43a3dfd49b"
+        "animal": "dinosaur"
       },
       {
-        "_id": "5eb5f9a5d814a9f2d2b0ced5"
+        "animal": "lizard"
       },
       {
-        "_id": "5eb5f9a509c7655a7ebb5d15"
+        "animal": "parrot"
       },
       {
-        "_id": "5eb5f9a579e7cf43a3dfd49b"
+        "animal": "raccoon"
       },
       {
-        "_id": "5eb5f9a5d814a9f2d2b0ced5"
+        "animal": "oppossum"
       },
       {
-        "_id": "5eb5f9a509c7655a7ebb5d15"
+        "animal": "elephant"
       },
       {
-        "_id": "5eb5f9a579e7cf43a3dfd49b"
+        "animal": "lion"
       }
 ]

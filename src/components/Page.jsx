@@ -6,15 +6,18 @@ import Pagination from './Pagination';
 //divide data per 4
 //get length of how many chunks of data - that's the number of pages - total number
 // get current page
-const DEFAULT_SIZE = 4;
+const DEFAULT_SIZE = 3;
 const divideData = (arr, leng) => {
-    if(arr.length > 0 ) {
-
+    let newArr = [];
+    if(Array.isArray(arr) ) {
+        let chunk = arr.slice(0, leng);
+        newArr.push(chunk);
     }
+    console.log(newArr);
 }
 const getPage = (array, howManyToShow, index) => {
     const paginatedDate = divideData(array, howManyToShow);
-
+    console.log(paginatedDate);
 }
 
 class Page extends Component {
@@ -29,7 +32,9 @@ class Page extends Component {
     render() {
         return ( 
             <div className="container">
-                {this.props.data}
+               {
+                getPage(data, DEFAULT_SIZE, 1)
+               }
             </div>
         )
     }
