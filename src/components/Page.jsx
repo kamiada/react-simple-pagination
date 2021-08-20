@@ -23,22 +23,24 @@ const divideData = (arr, leng) => {
   }
   return newArr;
 };
-const getPage = (array, howManyToShow, index) => {
+const getPage = (array, howManyToShow) => {
   const paginatedData = divideData(array, howManyToShow);
   const totalNumbOfPages = paginatedData.length;
+  return {paginatedData, totalNumbOfPages};
 };
 
 class Page extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPageIndex: 1,
+      currentPageIndex: 0,
       totalNumbOfPages: 0,
+      paginatedData: []
     };
   }
 
   render() {
-    return <div className="container">{getPage(data, DEFAULT_SIZE, 1)}</div>;
+    return <div className="container">{getPage(data, DEFAULT_SIZE)}</div>;
   }
 }
 
