@@ -8,16 +8,17 @@ class Pagination extends Component {
   }
   generateButtons = () => {
     const { numberOfButtons } = this.props;
-    if (numberOfButtons.length > 0) {
-        numberOfButtons.map((element, index) => 
-            <button>
-                {element[index]}
-            </button>
-        )
+    console.log(numberOfButtons)
+    if (numberOfButtons > 0) {
+      for(let n=0; n<numberOfButtons; n++) {
+        <button>n</button>
+      }
+    } else {
+      return <button>1</button>;
     }
   };
   render() {
-    return <Fragment>{this.generateButtons()}</Fragment>;
+    return <div>{this.generateButtons()}</div>;
   }
 }
 export default Pagination;
