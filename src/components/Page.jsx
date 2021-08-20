@@ -40,7 +40,7 @@ class Page extends Component {
     return (
       <Fragment>
         <div className="container">nanana</div>
-        <div>
+        <div className="pagination_container">
           <Pagination numberOfButtons={totalNumbOfPages} />
         </div>
       </Fragment>
