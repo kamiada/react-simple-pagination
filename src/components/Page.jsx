@@ -23,13 +23,6 @@ const divideData = (arr, leng) => {
   }
   return newArr;
 };
-
-const getPage = (array, howManyToShow, indexToShow) => {
-  const paginatedData = divideData(array, howManyToShow);
-  const totalNumbOfPages = paginatedData.length;
-  console.log(totalNumbOfPages);
-  return { currentPage: paginatedData[indexToShow], totalNumb: totalNumbOfPages };
-};
  
 class Page extends Component {
   constructor(props) {
@@ -41,7 +34,10 @@ class Page extends Component {
     };
   }
   render() {
-    const { paginatedData, totalNumbOfPages }  = getPage(data, DEFAULT_SIZE, this.state.currentPageIndex);
+    let { paginatedData, totalNumbOfPages } = this.state;
+    paginatedData = divideData(data, DEFAULT_SIZE);
+    totalNumbOfPages = paginatedData.length;
+    console.log(totalNumbOfPages);
     return <div className="container">
     <Pagination 
       numberOfButtons={totalNumbOfPages}

@@ -6,19 +6,17 @@ class Pagination extends Component {
     super(props);
     this.generateButtons = this.generateButtons.bind(this);
   }
-  generateButtons = () => {
-    const { numberOfButtons } = this.props;
-    console.log(numberOfButtons)
-    if (numberOfButtons > 0) {
-      for(let n=0; n<numberOfButtons; n++) {
-        <button>n</button>
-      }
-    } else {
-      return <button>1</button>;
-    }
-  };
+  generateButtons = (number) => {
+    const arrButtons = [];
+   for(let n=0; n<number; n++) {
+      arrButtons.push(<button>{n}</button>);
+   }
+   return arrButtons;
+}
+
   render() {
-    return <div>{this.generateButtons()}</div>;
+    const {numberOfButtons} = this.props;
+    return <div>{this.generateButtons(numberOfButtons)}</div>;
   }
 }
 export default Pagination;
