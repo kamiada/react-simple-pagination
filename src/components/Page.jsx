@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import "./stylesheet.scss";
 import data from "./data.json";
 import Pagination from "./Pagination";
@@ -18,12 +18,12 @@ const divideData = (arr, leng) => {
       let chunk = arr.slice(i, leng);
       newArr.push(chunk);
       leng += DEFAULT_SIZE;
-      i += DEFAULT_SIZE -1;
+      i += DEFAULT_SIZE - 1;
     }
   }
   return newArr;
 };
- 
+
 class Page extends Component {
   constructor(props) {
     super(props);
@@ -37,12 +37,14 @@ class Page extends Component {
     let { paginatedData, totalNumbOfPages } = this.state;
     paginatedData = divideData(data, DEFAULT_SIZE);
     totalNumbOfPages = paginatedData.length;
-    console.log(totalNumbOfPages);
-    return <div className="container">
-    <Pagination 
-      numberOfButtons={totalNumbOfPages}
-    />
-    </div>;
+    return (
+      <Fragment>
+        <div className="container">nanana</div>
+        <div>
+          <Pagination numberOfButtons={totalNumbOfPages} />
+        </div>
+      </Fragment>
+    );
   }
 }
 
