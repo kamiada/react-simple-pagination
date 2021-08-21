@@ -28,21 +28,34 @@ class Page extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPageIndex: 0,
+      pageIndex: 0,
+      currentPage: [],
       totalNumbOfPages: 0,
       paginatedData: [],
     };
   }
   render() {
-    let { paginatedData, totalNumbOfPages } = this.state;
+    let { paginatedData, totalNumbOfPages, currentPage, pageIndex } =
+      this.state;
     paginatedData = divideData(data, DEFAULT_SIZE);
+    currentPage = paginatedData[pageIndex];
+    console.log(pageIndex);
     totalNumbOfPages = paginatedData.length;
     return (
       <Fragment>
-        <div className="container">nanana</div>
-        <div className="pagination_container">
-          <Pagination numberOfButtons={totalNumbOfPages} />
-        </div>
+        {currentPage ? (
+          <Fragment>
+          {currentPage.map(element => 
+            <div className="container">{element.animal}</div>
+          )}
+            <div className="pagination_container">
+              <Pagination
+                numberOfButtons={totalNumbOfPages}
+                pageIndex={pageIndex}
+              />
+            </div>
+          </Fragment>
+        ) : null}
       </Fragment>
     );
   }
