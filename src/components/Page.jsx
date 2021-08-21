@@ -35,9 +35,9 @@ class Page extends Component {
       paginatedData: [],
     };
   }
-  onClickMovePage = (currentPageNumb) => {
+  onClickMovePage = (pageIndex) => {
     this.setState({
-      currentPageNumb
+      pageIndex
     });
   }
   render() {
