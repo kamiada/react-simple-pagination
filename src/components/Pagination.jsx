@@ -9,7 +9,7 @@ class Pagination extends Component {
   generateButtons = (number) => {
     const arrButtons = [];
    for(let n=0; n<number; n++) {
-      arrButtons.push(<button>{n}</button>);
+      arrButtons.push(<button onClick={this.props.onClick}>{n}</button>);
    }
    return arrButtons;
 }

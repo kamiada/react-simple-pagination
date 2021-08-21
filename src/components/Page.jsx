@@ -27,6 +27,7 @@ const divideData = (arr, leng) => {
 class Page extends Component {
   constructor(props) {
     super(props);
+    this.onClickMovePage = this.onClickMovePage.bind(this);
     this.state = {
       pageIndex: 0,
       currentPage: [],
@@ -34,13 +35,18 @@ class Page extends Component {
       paginatedData: [],
     };
   }
+  onClickMovePage = (currentPageNumb) => {
+    this.setState({
+
+    });
+  }
   render() {
     let { paginatedData, totalNumbOfPages, currentPage, pageIndex } =
       this.state;
     paginatedData = divideData(data, DEFAULT_SIZE);
     currentPage = paginatedData[pageIndex];
-    console.log(pageIndex);
     totalNumbOfPages = paginatedData.length;
+
     return (
       <Fragment>
         {currentPage ? (
@@ -52,6 +58,7 @@ class Page extends Component {
               <Pagination
                 numberOfButtons={totalNumbOfPages}
                 pageIndex={pageIndex}
+                onClick={this.onClickMovePage}
               />
             </div>
           </Fragment>
