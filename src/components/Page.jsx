@@ -37,7 +37,7 @@ class Page extends Component {
   }
   onClickMovePage = (currentPageNumb) => {
     this.setState({
-
+      currentPageNumb
     });
   }
   render() {
