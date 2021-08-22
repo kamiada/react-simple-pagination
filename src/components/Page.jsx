@@ -3,9 +3,6 @@ import "./stylesheet.scss";
 import data from "./data.json";
 import Pagination from "./Pagination";
 
-//divide data per 3
-//get length of how many chunks of data - that's the number of pages - total number
-// get current page
 const DEFAULT_SIZE = 3;
 
 const divideData = (arr, leng) => {
