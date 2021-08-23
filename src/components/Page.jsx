@@ -48,9 +48,11 @@ class Page extends Component {
       <Fragment>
         {currentPage ? (
           <Fragment>
+          <div className="container">
           {currentPage.map(element => 
-            <div className="container">{element.animal}</div>
+           <> {element.animal} </>
           )}
+          </div>
             <div className="pagination_container">
               <Pagination
                 numberOfButtons={totalNumbOfPages}
